@@ -8,11 +8,14 @@
 import scrapy
 
 
-class Demo1Item(scrapy.Item):
+class DoubanItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    index = scrapy.Field()
-    name = scrapy.Field()
-    introduce = scrapy.Field()
-    star = scrapy.Field()
     # pass
+    index = scrapy.Field()
+    title = scrapy.Field()
+    star = scrapy.Field()
+    digest = scrapy.Field()
+    imgSrc = scrapy.Field()
+    quote = scrapy.Field()
+    doubanHref = scrapy.Field()

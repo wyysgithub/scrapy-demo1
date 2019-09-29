@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for demo1 project
+# Scrapy settings for douban project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'demo1'
+BOT_NAME = 'douban'
 
-SPIDER_MODULES = ['demo1.spiders']
-NEWSPIDER_MODULE = 'demo1.spiders'
+SPIDER_MODULES = ['douban.spiders']
+NEWSPIDER_MODULE = 'douban.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'demo1 (+http://www.yourdomain.com)' 到浏览器复制
+#USER_AGENT = 'douban (+http://www.yourdomain.com)'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'
 
 # Obey robots.txt rules
@@ -48,13 +48,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'demo1.middlewares.Demo1SpiderMiddleware': 543,
+#    'douban.middlewares.DoubanSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'demo1.middlewares.Demo1DownloaderMiddleware': 543,
+#    'douban.middlewares.DoubanDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -66,7 +66,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'demo1.pipelines.Demo1Pipeline': 300,
+   'douban.pipelines.DoubanPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -90,7 +90,9 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-mongo_host = "127.0.0.1"
-mongo_port = 27017
-mongo_db_name = 'douban'
-mongo_db_collection = 'douban_movie'
+MYSQL_HOST = '127.0.0.1'
+MYSQL_PORT = 3306
+MYSQL_DB = 'scrapy'
+MYSQL_UNAME = 'root'
+MYSQL_PWORD = 'root'
+MYSQL_CHARSET = 'utf8'
